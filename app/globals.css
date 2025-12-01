@@ -1,26 +1,54 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #87cefa, #1e90ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background-color: #ffd700;
+  color: #333;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffc107;
+}
+
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.weather-card img {
+  width: 80px;
+  height: 80px;
 }
